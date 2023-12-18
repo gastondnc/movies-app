@@ -1,0 +1,13 @@
+.custom-about-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 30px;
+  border-radius: 6px;
+}
+
+
+
+.custom-about-text {
+  text-justify: auto;
+}

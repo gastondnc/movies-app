@@ -1,0 +1,19 @@
+
+<!-- Card y su método Click para mostar la data que nos interesa -->
+<div class="movie-card">
+<!-- En el Enento Click por cada card que recoremos recuperamos el id y por argumento al método getDetail le pasmos cada movie.id -->
+
+  <div class="movie-card-img">
+    <!-- <img [src] = "getSafeUrl(movie.poster_path)" /> -->
+    <img [src] = "movie.poster_path" />
+  </div>
+
+  <div class="movie-card-title">
+    <p>{{movie.title}}</p>
+  </div>
+
+</div>
+<!-- End Card -->
+
+
+

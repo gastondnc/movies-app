@@ -1,0 +1,24 @@
+.custom-card-container {
+  padding: 25px;
+  width: 100%;
+  min-width: 200px;
+
+
+}
+
+.custom-card-title {
+  margin-bottom: 20px;
+}
+
+.custom-card-text {
+  line-height: 1.5;
+}
+
+.custom-card-shadow {
+  box-shadow:  0px 0px 10px 5px rgba(0, 0, 0, 0.3);
+}
+
+
+.custom-card-img {
+  text-align: center;
+}

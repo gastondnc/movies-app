@@ -1,0 +1,39 @@
+.gallery {
+  background: rgba(0, 0, 0, 0.3);
+  margin-top: 20px;
+  padding: 40px;
+
+}
+
+
+.gallery-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+.gallery-items {
+  display: flex;
+  gap: 10px;
+}
+
+.gallery-btn {
+  width: 40px;
+  background: rgba(0, 0, 0, 0.3);
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.gallery-btn:hover {
+  background: rgba(0, 0, 0, 0.6) ;
+  font-size: 30px;
+}
+
+.gallery-page {
+  color: #fff;
+  margin-top: 15px;
+}
+

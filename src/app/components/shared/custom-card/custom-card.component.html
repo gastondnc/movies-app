@@ -1,0 +1,26 @@
+
+<div
+
+  class="custom-card-container"
+  [ngClass]="{'custom-card-shadow': withShadow === true }"
+  [ngStyle]="{'background': backgroundColor, 'border-radius': borderRadius + 'px', 'color': textColor}"
+
+>
+
+  <div class="custom-card-title">
+    <h2>{{title}}</h2>
+  </div>
+
+  <div class="custom-card-img" *ngIf="image !== ''">
+    <img src="{{image}}" alt="image-card">
+  </div>
+
+  <div class="custom-card-text">
+    <p>{{text}}</p>
+  </div>
+
+
+
+
+
+</div>

@@ -1,0 +1,36 @@
+.movie-card:hover {
+  background: #222222;
+  box-shadow:  0px 0px 10px 8px rgba(0, 0, 0, 0.273);
+}
+
+
+.movie-card{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 250px;
+  background-color: #2222229e;
+  padding: 18px;
+  border-radius: 6px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.movie-card-title{
+  margin-top: 10px;
+}
+.movie-card-title > p{
+  font-size: 16px;
+  font-weight: 200;
+  width: 200px;
+  white-space:nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+}
+
+img {
+  width: 100%;
+  border-radius: 6px 6px 0px 0px;
+}
+

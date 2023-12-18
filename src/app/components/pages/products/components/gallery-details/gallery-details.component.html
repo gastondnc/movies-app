@@ -1,0 +1,47 @@
+
+
+<section  *ngIf="imagesUrlGallery.length > 0" class="gallery">
+<!-- Creamos un ng-contaner y le pasamos la directiva ngIf para hacer la condición de que si el largo del array mayor a 0  se deben pintar los posters -->
+  <ng-container class="gallery-card">
+
+
+    <div class="gallery-container">
+
+      <div class="gallery-items">
+        <button
+          class="gallery-btn"
+          [disabled]="actualPage < 2"
+          (click)="prevPage()"
+        >
+          &lt;
+        </button>
+
+          <div *ngFor="let imageUrl of imagesUrlGallery">
+            <a [href]="imageUrl" target="_blank">
+            <img [src]="imageUrl" />
+          </a>
+          </div>
+
+        <button
+          class="gallery-btn"
+          [disabled]="actualPage === getTotalPages()"
+          (click)="nextPage()"
+          >
+          &gt;
+        </button>
+      </div>
+
+      <div class="gallery-page">
+        <p> Página: {{actualPage}} / {{getTotalPages()}}</p>
+      </div>
+
+  </div>
+
+</ng-container>
+
+</section>
+
+
+
+
+

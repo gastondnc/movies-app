@@ -1,0 +1,70 @@
+
+<!-- Contenador de la Vista total de las Movies -->
+<div class="page-container">
+
+
+
+
+  <h1>{{title}}</h1>
+
+  <!-- Input para hacer la busqueda de las Movies -->
+  <div class="search-container">
+
+    <input
+      [ngStyle]="{'background': searchValue === '' ? 'white' : 'lime'}"
+      class="search-input"
+      id="inputSearch"
+      type="text"
+      placeholder="search your movie"
+      (keyup)="handleSearch()"
+    >
+  </div>
+  <!-- END Input -->
+
+  <ng-container *ngIf="isLoading === false; else loader">
+    <!-- Component Pager -->
+
+      <app-pager
+       *ngIf="movies.length > 0"
+        [pager-data]="{ actual: actualPage, total: totalPages }"
+        (on-goto-page)="handleFilter($event)"
+      >
+      </app-pager>
+
+    <!-- END Component Pager -->
+
+    <!-- Contenedor de Cards -->
+    <div class="movies-container" *ngIf="movies.length > 0; else noResults">
+
+      <!-- Card y su método Click para mostar la data que nos interesa -->
+      <app-movie-card
+        *ngFor="let movie of movies"
+        [movie-data]="movie"
+        (click)="openDetail(movie.id)"
+      >
+      </app-movie-card>
+      <!-- End Card -->
+
+    </div>
+    <!-- End Contenedor de Cards -->
+
+    <ng-template #noResults>
+      <h4>No hay resultado con los parametros de busqueda</h4>
+    </ng-template>
+
+  </ng-container>
+
+  <ng-template #loader >
+    <app-loader loader-label="Loading Movies...."></app-loader>
+  </ng-template>
+
+</div>
+<!-- END Contenador de la Vista total de las Movies -->
+
+
+
+
+
+
+
+

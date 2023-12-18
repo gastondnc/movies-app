@@ -1,0 +1,76 @@
+.movie-card-container{
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 15px;
+}
+
+
+h2 {
+  font-size: 60px;
+
+  color: #fff;
+  margin-bottom: 30px;
+}
+
+h3 {
+  font-size: 40;
+  color: #fff;
+  margin-bottom: 30px;
+}
+
+img {
+  min-width: 220px;
+  max-width: 600px;
+  border-radius: 6px;
+  cursor: pointer;
+  box-shadow: 0px 0px 15px 5px rgba(0, 0, 0, 0.273);
+}
+
+.movie-card-title{
+  margin-left: 30px;
+  padding: 20px;
+  font-size: 30px;
+  color: #fff;
+  text-align: justify;
+  line-height: 1.5;
+
+}
+
+.movie-release-date {
+  margin: 10px;
+  font-size: 18px;
+}
+
+.movie-overview {
+  margin: 10px;
+  font-size: 18px;
+}
+
+.movie-genres {
+  margin: 10px;
+  font-size: 18px;
+}
+
+.movie-average {
+  display: inline-block;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 6px;
+  font-size: 20px;
+  background: rgba(44, 33, 62, 0.624);
+  box-shadow:  0px 0px 10px 0px rgba(0, 0, 0, 0.273)
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 20px;
+}
+
+
+
+
+
+
+

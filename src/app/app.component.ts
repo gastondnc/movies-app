@@ -5,6 +5,15 @@ import { Component } from '@angular/core';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
+
+
 export class AppComponent {
-  title = 'bases';
+
+  public todayToFooter: any = new Date().getFullYear()
+
+  public clickHandleFather(){
+    console.log('Click Father')
+  }
+
+
 }

@@ -1,0 +1,48 @@
+
+<h1>{{title}}</h1>
+
+  <!-- Creamos el Evento Click y llamamos al método handleclick y lo ejecutamos  -->
+<ng-container >
+  <div class="welcome-cards-container">
+    <app-custom-card
+      title="Ultimas Noticias"
+      text="Lorem ipsum dolor sit amet consectetur adipisicing elit."
+      background-color="#164863"
+      text-color="#DDF2FD"
+      [border-radius]="10"
+      [with-shadow]="true"
+      [image]="mycard.img"
+    >
+    </app-custom-card>
+
+    <app-custom-card
+      title="Ultimas Noticias"
+      text="Lorem ipsum dolor sit amet consectetur adipisicing elit. "
+      [with-shadow]="true"
+      [image]="mycard.img"
+    >
+    </app-custom-card>
+
+    <app-custom-card
+      [title]="mycard.title"
+      [text]="mycard.text"
+      [background-color]="mycard.bgColor"
+      [text-color]="mycard.textColor"
+      [border-radius]="mycard.borderRadius"
+      [with-shadow]="mycard.withShadow"
+      [image]="mycard.img"
+    >
+    </app-custom-card>
+  </div>
+
+  <div class="welcom-big-card">
+    <app-custom-card
+    [text]="mycard.text"
+
+    >
+
+    </app-custom-card>
+  </div>
+
+
+</ng-container>

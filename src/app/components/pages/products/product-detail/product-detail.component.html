@@ -1,0 +1,55 @@
+
+<h2>{{title}}</h2>
+
+<ng-container *ngIf="movie!==null">
+
+  <div class="movie-card-container">
+
+    <div class="movie-img">
+      <img [src]="getSafeUrl(movie?.poster)" />
+    </div>
+
+    <div class="movie-card-title">
+
+      <h4>{{movie?.title}}</h4>
+      <p class="movie-release-date">Fecha de lanzamiento: {{movie?.date | date}}</p>
+      <p class="movie-genres">Género: {{getGenres(movie?.genres)}}</p>
+      <p class="movie-overview">Sinopsis: <span innerHTML="{{movie?.description | italicPipe}}"></span></p>
+      <!-- <p class="movie-overview">Sinopsis: <strong>{{movie?.description}} </strong> </p> -->
+
+      <div class="movie-average">
+        <h6>{{getAverage(movie?.average)}}</h6>
+      </div>
+
+      <!-- Tres formas de hacer un Renderisado condicional -->
+      <!-- <div *ngIf="movie.link !== ''"> -->
+      <div *ngIf="movie.link.length > 0  ">
+      <!-- <div *ngIf="movie.link.length  "> -->
+        <a href="{{movie.link}}" target="_blank">Página Oficial</a>
+      </div>
+
+    </div>
+
+  </div>
+
+  <app-gallery-details
+    [movie-id] = movieId
+  >
+
+  </app-gallery-details>
+
+</ng-container>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

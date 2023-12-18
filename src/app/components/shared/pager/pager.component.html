@@ -1,0 +1,25 @@
+
+
+<div class="pager-container" >
+
+  <button
+    class="btn"
+    [ngClass]="{'hide': pager.actual === 1}"
+    (click)="handleClick(pager.actual - 1)"
+    [disabled]="pager.actual === 1"
+  >
+    &lt;
+  </button>
+
+    <p>{{pager.actual}}/{{pager.total}}</p>
+
+  <button
+    class="btn"
+    (click)="handleClick(pager.actual + 1)"
+    [disabled]="pager.actual === pager.total"
+  >
+    &gt;
+  </button>
+
+
+</div>
